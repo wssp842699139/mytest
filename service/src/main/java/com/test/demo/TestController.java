@@ -40,8 +40,9 @@ public class TestController{
 
 
    @RequestMapping("/hello")
-    public void hello(HttpServletRequest request, HttpServletResponse response) throws IOException, InterruptedException {
-       DistributedLockUtil.lock(Test2.class.getName());
+    public String hello(HttpServletRequest request, HttpServletResponse response) throws IOException, InterruptedException {
+       //DistributedLockUtil.lock(Test2.class.getName());
+       return "hello";
     }
 
     @RequestMapping("/test")
