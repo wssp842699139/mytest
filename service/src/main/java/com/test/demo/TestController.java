@@ -42,7 +42,7 @@ public class TestController{
    @RequestMapping("/hello")
     public String hello(HttpServletRequest request, HttpServletResponse response) throws IOException, InterruptedException {
        //DistributedLockUtil.lock(Test2.class.getName());
-       return "hello";
+       return "hello 正在测试啊";
     }
 
     @RequestMapping("/test")
