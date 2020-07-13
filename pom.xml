@@ -6,13 +6,14 @@
 
 
 
-    <groupId>com.test</groupId>
+    <groupId>com.test.test</groupId>
     <artifactId>mytest</artifactId>
     <packaging>pom</packaging>
     <version>1.0-SNAPSHOT</version>
 
     <modules>
         <module>service</module>
+        <module>testJenkins</module>
     </modules>
 
     <parent>
