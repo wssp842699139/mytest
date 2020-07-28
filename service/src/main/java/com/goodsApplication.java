@@ -2,6 +2,10 @@ package com;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.scheduling.annotation.EnableAsync;
+import org.springframework.scheduling.annotation.EnableScheduling;
+import org.springframework.scheduling.annotation.Scheduled;
+import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 /**
  * @version V1.0
@@ -10,6 +14,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  * @package com.test
  */
 @SpringBootApplication
+@EnableAsync
+@EnableScheduling
 public class goodsApplication {
     public static void main(String[] args) {
         SpringApplication.run(goodsApplication.class,args);

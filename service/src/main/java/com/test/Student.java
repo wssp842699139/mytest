@@ -9,38 +9,38 @@ import java.io.Serializable;
  * @package com.test
  */
 public class Student implements Serializable{
-    private String name;
-    private String sex ;
+   private String username;
+   private String address;
 
-    public String getName() {
-        return name;
+    public Student() {
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public Student(String username, String address) {
+        this.username = username;
+        this.address = address;
     }
 
-    public String getSex() {
-        return sex;
+    public String getUsername() {
+        return username;
     }
 
-    public void setSex(String sex) {
-        this.sex = sex;
+    public void setUsername(String username) {
+        this.username = username;
+    }
+
+    public String getAddress() {
+        return address;
+    }
+
+    public void setAddress(String address) {
+        this.address = address;
     }
 
     @Override
     public String toString() {
         return "Student{" +
-                "name='" + name + '\'' +
-                ", sex='" + sex + '\'' +
+                "username='" + username + '\'' +
+                ", address='" + address + '\'' +
                 '}';
-    }
-
-    public Student() {
-    }
-
-    public Student(String name, String sex) {
-        this.name = name;
-        this.sex = sex;
     }
 }
