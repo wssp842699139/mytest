@@ -2,28 +2,20 @@ package com.test.demo;
 
 
 import com.test.Student;
-import com.test.Utils.DistributedLockUtil;
 import com.test.Utils.MD5Utils;
 import com.test.Utils.RedisUtils;
-import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.scheduling.annotation.Async;
 import org.springframework.util.CollectionUtils;
 import org.springframework.web.bind.annotation.*;
-import redis.clients.jedis.Jedis;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.xml.crypto.Data;
 import java.io.IOException;
 import java.io.UnsupportedEncodingException;
 import java.net.URLEncoder;
-import java.sql.Date;
 import java.util.*;
 import java.util.concurrent.TimeUnit;
-import java.util.concurrent.locks.Lock;
-import java.util.concurrent.locks.ReentrantLock;
 
 /**
  * @version V1.0
