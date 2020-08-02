@@ -2,6 +2,9 @@ package com;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.annotation.Bean;
+import redis.clients.jedis.JedisPool;
+import redis.clients.jedis.JedisPoolConfig;
 
 /**
  * @version V1.0
@@ -13,5 +16,11 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class testApplication {
     public static void main(String[] args) {
         SpringApplication.run(testApplication.class,args);
+    }
+
+    @Bean
+    public JedisPool jedisPool() {
+        //JedisPoolConfig jedisPoolConfig = setPoolConfig(redisPoolMaxIdle, redisPoolMinIdle, redisPoolMaxActive, redisPoolMaxWait, true);
+        return new JedisPool();
     }
 }

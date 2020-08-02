@@ -22,5 +22,5 @@ public interface TestDao {
 
     void insertStudent(Student student);
 
-     void updateStudeng(Student student);
+     void updateStudent(Student student);
 }

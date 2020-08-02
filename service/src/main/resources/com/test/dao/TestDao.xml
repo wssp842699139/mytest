@@ -6,7 +6,7 @@
     </insert>
 
 
-    <update id="updateStudeng" parameterType="com.test.Student">
+    <update id="updateStudent" parameterType="com.test.Student">
         UPDATE USER SET address=#{address} where username=#{username}
     </update>
 

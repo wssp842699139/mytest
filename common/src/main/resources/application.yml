@@ -5,6 +5,7 @@ spring:
     name: common
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
+    #url: jdbc:mysql://localhost/user?useUnicode=true&characterEncoding=UTF-8&serverTimezone=UTC
     url: jdbc:mysql://8.129.185.160:33306/user?useUnicode=true&characterEncoding=UTF-8&serverTimezone=UTC
     username: root
     password: 123456
