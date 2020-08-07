@@ -19,13 +19,10 @@ import java.util.concurrent.Executors;
 public class Test2 {
 
     public static void main(String[] args) {
-
-        List<String> a = new ArrayList<>();
-        a.add("moblileNumber");
-        a.add("user_welfare_id");
-        a.add("platformId");
-        Collections.sort(a);
-        System.out.println(a.toString());
+        long time = new Date().getTime();
+        long l = System.currentTimeMillis();
+        System.out.println(time);
+        System.out.println(l);
     }
 
 }

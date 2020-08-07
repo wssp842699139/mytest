@@ -49,7 +49,7 @@ public class TestService {
 
     @Transactional(rollbackFor = Exception.class)
     public void updateStudent(Student student) {
-        testDao.updateStudeng(student);
+        testDao.updateStudent(student);
         int a = 1/0;
     }
 }
