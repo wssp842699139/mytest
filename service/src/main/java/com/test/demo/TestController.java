@@ -1,6 +1,7 @@
 package com.test.demo;
 
 
+import com.alibaba.fastjson.JSONObject;
 import com.test.Student;
 import com.test.Utils.MD5Utils;
 import com.test.Utils.RedisUtils;
@@ -43,8 +44,21 @@ public class TestController {
 
 
     @RequestMapping("/hello")
-    public String hello(HttpServletRequest request, HttpServletResponse response) throws IOException, InterruptedException {
-       return "success";
+    @ResponseBody
+    public JSONObject hello(HttpServletRequest request, HttpServletResponse response) throws IOException, InterruptedException {
+        Map<String,Object> hashmap = new HashMap<>();
+        Enumeration<String> headerNames = request.getHeaderNames();
+        while (headerNames.hasMoreElements()){
+            String s = headerNames.nextElement();
+            hashmap.put(s,request.getHeader(s));
+
+        }
+        String header = request.getRemoteAddr();
+        String remoteHost = request.getRemoteHost();
+        hashmap.put("remoteHost",remoteHost);
+        hashmap.put("header",header);
+        JSONObject jsonObject = new JSONObject(hashmap);
+        return jsonObject;
     }
 
 
