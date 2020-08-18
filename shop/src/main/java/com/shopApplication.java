@@ -13,9 +13,9 @@ import redis.clients.jedis.JedisPoolConfig;
  * @package PACKAGE_NAME
  */
 @SpringBootApplication
-public class testApplication {
+public class shopApplication {
     public static void main(String[] args) {
-        SpringApplication.run(testApplication.class,args);
+        SpringApplication.run(shopApplication.class,args);
     }
 
     @Bean

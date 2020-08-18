@@ -1,6 +1,6 @@
 package com.test;
 
-import com.test.Student;
+import com.test.bean.Student;
 import com.test.demo.TestService;
 import org.junit.Test;
 import org.junit.runner.RunWith;

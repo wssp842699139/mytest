@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE mapper PUBLIC "-//http://mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.test.dao.LoginDao">
+
+    <insert id="save" parameterType="com.test.bean.User">
+        INSERT into user (username ,password) VALUES (#{username} , #{password})
+    </insert>
+
+    <select id="selectUsername" resultType="com.test.bean.User" parameterType="string">
+        SELECT * from user where username = #{username}
+    </select>
+
+
+    <select id="selectByUsernameAndPassword" resultType="com.test.bean.User" parameterType="com.test.bean.User">
+        SELECT * from user where username = #{username} and password = #{password}
+    </select>
+</mapper>

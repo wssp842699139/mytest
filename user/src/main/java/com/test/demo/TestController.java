@@ -2,7 +2,7 @@ package com.test.demo;
 
 
 import com.alibaba.fastjson.JSONObject;
-import com.test.Student;
+import com.test.bean.Student;
 import com.test.Utils.MD5Utils;
 import com.test.Utils.RedisUtils;
 import org.springframework.beans.factory.annotation.Autowired;

@@ -1,6 +1,6 @@
 package com.test.demo;
 
-import com.test.Student;
+import com.test.bean.Student;
 import com.test.dao.TestDao;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.scheduling.annotation.Async;

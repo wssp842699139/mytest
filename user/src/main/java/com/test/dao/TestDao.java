@@ -1,10 +1,8 @@
 package com.test.dao;
 
-import com.test.Student;
+import com.test.bean.Student;
 
 import org.apache.ibatis.annotations.Mapper;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Repository;
 
 /**
  * @version V1.0

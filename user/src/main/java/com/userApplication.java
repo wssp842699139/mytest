@@ -16,8 +16,8 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 @SpringBootApplication
 @EnableAsync
 @EnableScheduling
-public class goodsApplication {
+public class userApplication {
     public static void main(String[] args) {
-        SpringApplication.run(goodsApplication.class,args);
+        SpringApplication.run(userApplication.class,args);
     }
 }
