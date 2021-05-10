@@ -1,8 +1,9 @@
 package com.test.dao;
 
 import com.test.bean.Student;
-
 import org.apache.ibatis.annotations.Mapper;
+
+import java.util.List;
 
 /**
  * @version V1.0
@@ -11,14 +12,14 @@ import org.apache.ibatis.annotations.Mapper;
  * @package com.test.dao
  */
 @Mapper
+
 public interface TestDao {
 
 
-
-
-    Student selectStudent(String username);
+    List<Student> selectStudent(String username);
 
     void insertStudent(Student student);
 
      void updateStudent(Student student);
+
 }

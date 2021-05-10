@@ -11,7 +11,7 @@
 
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>testJenkins</artifactId>
+    <artifactId>shop</artifactId>
 
     <packaging>jar</packaging>
 

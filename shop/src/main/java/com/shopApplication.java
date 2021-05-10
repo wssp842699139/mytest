@@ -2,9 +2,6 @@ package com;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.context.annotation.Bean;
-import redis.clients.jedis.JedisPool;
-import redis.clients.jedis.JedisPoolConfig;
 
 /**
  * @version V1.0
@@ -15,12 +12,7 @@ import redis.clients.jedis.JedisPoolConfig;
 @SpringBootApplication
 public class shopApplication {
     public static void main(String[] args) {
+        System.setProperty("es.set.netty.runtime.available.processors", "false");
         SpringApplication.run(shopApplication.class,args);
-    }
-
-    @Bean
-    public JedisPool jedisPool() {
-        //JedisPoolConfig jedisPoolConfig = setPoolConfig(redisPoolMaxIdle, redisPoolMinIdle, redisPoolMaxActive, redisPoolMaxWait, true);
-        return new JedisPool();
     }
 }

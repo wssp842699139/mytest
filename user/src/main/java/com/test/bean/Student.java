@@ -1,6 +1,8 @@
 package com.test.bean;
 
 import java.io.Serializable;
+import java.util.Arrays;
+import java.util.Objects;
 
 /**
  * @version V1.0
@@ -11,6 +13,16 @@ import java.io.Serializable;
 public class Student implements Serializable{
    private String username;
    private String address;
+   private Integer age;
+   private byte[] aa;
+
+    public byte[] getAa() {
+        return aa;
+    }
+
+    public void setAa(byte[] aa) {
+        this.aa = aa;
+    }
 
     public Student() {
     }
@@ -36,11 +48,30 @@ public class Student implements Serializable{
         this.address = address;
     }
 
+    public Integer getAge() {
+        return age;
+    }
+
+    public void setAge(Integer age) {
+        this.age = age;
+    }
+
     @Override
-    public String toString() {
-        return "Student{" +
-                "username='" + username + '\'' +
-                ", address='" + address + '\'' +
-                '}';
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Student student = (Student) o;
+        return Objects.equals(username, student.username) &&
+                Objects.equals(address, student.address) &&
+                Objects.equals(age, student.age) &&
+                Arrays.equals(aa, student.aa);
+    }
+
+    @Override
+    public int hashCode() {
+
+        int result = Objects.hash(username, address, age);
+        result = 31 * result + Arrays.hashCode(aa);
+        return result;
     }
 }

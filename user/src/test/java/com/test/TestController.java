@@ -1,7 +1,7 @@
 package com.test;
 
 import com.test.bean.Student;
-import com.test.demo.TestService;
+import com.test.设计模式等.TestService;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -26,5 +26,6 @@ public class TestController {
         student.setAddress("ggg1");
         testService.insertStudent(student);
     }
+
 
 }

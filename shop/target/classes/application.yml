@@ -2,20 +2,26 @@ server:
   port: 8082
 spring:
   application:
-    name: testJenkins
+    name: shop
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://localhost/user?useUnicode=true&characterEncoding=UTF-8&serverTimezone=UTC
-    #url: jdbc:mysql://8.129.185.160:33306/user?useUnicode=true&characterEncoding=UTF-8&serverTimezone=UTC
+    #url: jdbc:mysql://localhost/user?useUnicode=true&characterEncoding=UTF-8&serverTimezone=UTC
+    url: jdbc:mysql://8.129.185.160:33306/user?useUnicode=true&characterEncoding=UTF-8&serverTimezone=UTC
     username: root
-    password: root
+    password: 123456
   redis:
     database: 0
     # Redis服务器地址
     host: 127.0.0.1
     # Redis服务器连接端口
     port: 6379
-    # Redis服务器连接密码（默认为空）
+  data:
+    elasticsearch:
+      cluster-name: docker-cluster
+      cluster-nodes: 8.129.185.160:9300
+      repositories:
+              enabled: true
+
 
 
 corpsecret: BNNPEwdwEsoM64KHDCYoW4qm3dcewtga92WRO9feRoo

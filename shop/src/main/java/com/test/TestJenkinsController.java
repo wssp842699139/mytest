@@ -1,12 +1,11 @@
 package com.test;
 
+import com.test.config.RedisPool;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.util.CollectionUtils;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import redis.clients.jedis.Jedis;
-import redis.clients.jedis.JedisPool;
 
 import java.util.List;
 
@@ -25,8 +24,6 @@ public class TestJenkinsController {
     private static final int defaultTime = 60;
     private static final String key = "testKey";
 
-    @Autowired
-    JedisPool jedisPool;
 
     @RequestMapping("/test")
     public String test1() {
@@ -36,7 +33,7 @@ public class TestJenkinsController {
 
     @RequestMapping("/testRedisLocal")
     public void redisSuoTest() {
-        Jedis redis = jedisPool.getResource();
+        Jedis redis = RedisPool.getJedis();
         Long setnx = redis.setnx(key, "1");
         System.out.println("加锁返回的字段为 " + setnx);
         if (setnx ==1){
@@ -75,7 +72,7 @@ public class TestJenkinsController {
     @RequestMapping("/insertLocalTest")
     public void insertLocalTest() {
         System.out.println("到这里了1");
-        Jedis redis = jedisPool.getResource();
+        Jedis redis = RedisPool.getJedis();
         System.out.println("到这里了2");
         Long setnx = redis.setnx(key, String.valueOf(System.currentTimeMillis()+defaultTime));
         System.out.println("加锁返回的字段为 " + setnx);
